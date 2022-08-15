@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+    <link rel="stylesheet" href="style.css">
+  <script defer src="jquery.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script defer src="index.js"></script>
+
+</head>
+<body>
+    <main class="main">
+        <button id="calculator">Calculator</button>
+        <button id="pass-gen">Password Generator</button>
+        <button id="tic-tac-toe">Tic-Tac-Toe</button>
+        <button id="Rock-Paper-Scissors">Rock-Paper-Scissors</button>
+    </main>
+
+     <div class="calculator">
+        <button class="back"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+        <main>
+            <input class="screen" id="screen">
+            <div class="btns">
+                <div class="main-btn">
+                 <button class="btn btn-warn" onclick="document.getElementById('screen').value=('')">C</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value=((document.getElementById('screen').value)*100)">%</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value=(document.getElementById('screen').value.slice(0,document.getElementById('screen').value.length-1))">◀</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('/')">/</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('7')">7</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('8')">8</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('9')">9</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('*')">x</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('4')">4</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('5')">5</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('6')">6</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('-')">-</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('1')">1</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('2')">2</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('3')">3</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('+')">+</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('00')">00</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('0')">0</button>
+                 <button class="btn btn-info" onclick="document.getElementById('screen').value+=('.')">.</button>
+                 <button class="btn btn-danger" onclick="document.getElementById('screen').value=eval($('.screen').val())" >=</button>
+ 
+                </div>
+                
+                <div class="scientific-btn">
+                 <button class="btn btn-sci" onclick="Sin()">Sin</button>
+                 <button class="btn btn-sci" onclick="Cos()">Cos</button>
+                 <button class="btn btn-sci" onclick="Tan()">Tan</button>
+                 <button class="btn btn-sci" onclick="Log()">log</button>
+                 <button class="btn btn-sci" onclick="document.getElementById('screen').value+=('In')">In</button>
+                 <button class="btn btn-sci" onclick="document.getElementById('screen').value+=('(')">(</button>
+                 <button class="btn btn-sci" onclick="document.getElementById('screen').value+=(')')">)</button>
+                 <button class="btn btn-sci" onclick="Power()">^</button>
+                 <button class="btn btn-sci" onclick="sqroot()">√</button>
+                 <button class="btn btn-sci" onclick="fact_out()">!</button>
+                 <button class="btn btn-sci" onclick="pi()">π</button>
+                 <button class="btn btn-sci" onclick="eular()">e</button>
+ 
+                
+            </div>
+           </div>
+         </main>
+    </div> 
+
+    <div class="password-generator">
+        <button class="back"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+
+        <div class="container">
+                    
+            <div class="header">
+                      <div class="pw">
+                                <span id="pw">Password Here</span>
+                                <button id="copy">Copy</button>
+                      </div>
+            </div>
+            <div class="body">
+                      <div class="form-control">
+                                <label for='length'>Password Length</label>
+                                <input type="number" id="length" value="10" min="8" max="30" >         
+                                
+                                <label for='upper'>Contain Uppercase</label>
+                                <input type="checkbox" id="upper" checked>         
+                                
+                                <label for='lower'>Contain Lowercase</label>
+                                <input type="checkbox" id="lower" checked>   
+                                
+                                <label for='number'>Contain Number</label>
+                                <input type="checkbox" id="number">
+            
+                                <label for='symbol'>Contain Symbols</label>
+                                <input type="checkbox" id="symbol"> 
+                                
+                                <button class="generate" id="generate">Generate</button>                              
+                      </div>
+            
+            </div>
+            </div>
+            
+    </div>
+
+    <div class="tictactoe">
+      
+        <button class="back"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+<p>Tic-Tac-Toe</p>
+<div class="board">
+    <div class="main-board">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+    <div class="box box7"></div>
+    <div class="box box8"></div>
+    <div class="box box9"></div>
+</div>
+</div>
+    </div> 
+
+    <div class="rockpaperscissors">
+        <button class="back"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+        <div class="game-container">
+            <h1>Rock-Paper-Scissors</h1>
+    
+            <div class="game-board">
+                <div class="details">
+                <p>Player</p>
+                <p>CPU</p>
+            </div>
+                <div class="imgs">
+                    <img src="./images/player.png" alt="img1" id="img1">
+                    <p id="display">V / S</p>
+                    <img src="./images/cpu.png" alt="img2" id="img2">
+                </div>
+                <div class="controls">
+                    <button class="rock">Rock</button>
+                    <button class="paper">Paper</button>
+                    <button class="scissors">Scissors</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,267 @@
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+::selection{
+    color: #ecb602;
+    background-color: black ;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: black;
+    overflow: hidden;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+@media screen and (max-width:650px){
+    main {
+        flex-direction: column;
+    } 
+}
+
+main button{
+    padding: 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    outline: 2px solid black;
+    font-size: 1.5em;
+    outline-offset: 2px;
+}
+.main button:first-child{
+    background: grey;
+    color: gold;
+    text-shadow: 2px 2px 8px black;
+}
+.main button:nth-child(2){
+    background: rebeccapurple;
+    color: White;
+    text-shadow: 2px 2px 8px black;
+}
+.main button:nth-child(3){
+    background: khaki;
+    text-shadow: 2px 2px 8px gray;
+}
+.main button:last-child{
+    background: coral;
+    text-shadow: 2px 2px 8px black;
+}
+.back{
+    position: absolute;
+    top: 10px;
+    left:10px;
+    color: #000;
+    border: none;
+    border-radius: 2px;
+    padding:5px;
+    outline: 2px solid #eee;
+    outline-offset: 2px;
+    background: gold;
+}
+/* calculator css */
+.calculator{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.calculator main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+    padding: 15px;
+    border-radius: 8px;
+    flex-direction: column;
+    height: 80%;
+}
+.calculator .screen{
+    width: 100%;
+    background: black;
+    padding: 1rem;
+    font-family: Terminal;
+    color:green;
+    font-size: 1.5em;
+    text-align: right;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+}
+.main-btn,.scientific-btn{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:2px;
+    margin-right:5px;
+}
+.btn-sci{
+    background:gold ;
+}
+@media screen and (max-width:650px){
+    .calculator main{
+        width: fit-content;
+        height: fit-content;
+    }
+    .btn{
+        padding: 0;
+    }
+    .btns{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-btn,.scientific-btn{
+        margin-top: 5px;
+    }
+}
+
+
+/* Password Generator */
+.password-generator{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.password-generator .container{ 
+    width: 400px;
+    background-color: rgb(69,17,118);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.header{
+    padding: 1rem;
+}
+
+.pw{
+    width: 100%;
+    height:70px;
+    background-color: rebeccapurple;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-size: 1.5rem;
+    
+}
+
+.form-control input {
+    background-color: gold;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    border: none;
+    font-size: 1.3rem;
+}
+.pw button{
+    transition: opacity 0.2s ease;
+    opacity: 0;
+    background-color: rgb(35,5,66);
+    font-weight: bold;
+    padding: 0.25rem 1rem;
+    color: #fff;          
+    border: none;
+    cursor: pointer;
+}
+
+.pw:hover button{
+    opacity: 1;
+}
+
+.body{
+    padding:  1rem;
+}
+
+.form-control{
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    margin: 0.75rem 0;
+    height: 40vh;
+}
+
+.generate{
+    background-color: #ecb602;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+@media (max-width:683px) or (max-width:540px){
+    .password-generator .container{
+        width: 90vw;
+    }
+}
+
+/* tic tac toe */
+
+.tictactoe p{text-align: center;font-size: 35px; color:white;}
+
+.board{display: flex; flex-direction: column;width: 100vw;height:90vh;background-color: black;padding:15px ; align-items: center; }
+.main-board{width: 40%;  flex-wrap: wrap; display: flex; justify-content: center;align-items: center;height: 90vh;}
+.box{background-color: aqua;display: flex;justify-content: center;align-items: center;font-size: 2.5rem; width: 150px; height: 150px; margin: 5px; }
+
+@media (max-width:683px) or (max-width:540px){
+    .board{
+        justify-content: center;
+    }
+    .main-board{
+    width: 60%;
+    height: 40%;
+    }
+    .box{
+    width: 15vw;
+    height: 10vh;
+    }
+ }
+/* rockpaperscissors */
+
+.rockpaperscissors{
+    height: 75vh;
+}
+
+.game-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: grey;
+}
+.game-board{
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-direction: column;
+width: 100vw;
+background: #6a5fe9ab;
+height: 100vh;
+}
+.game-board .details,.imgs{
+    display: flex;
+    justify-content: space-around ;
+    width: 100vw;
+    align-items: center;
+} 
+
+.game-board p,.game-board button{
+font-size:1.5em ;
+background: gold;
+padding: .2em .5em  ;
+border-radius: 12px;
+border: 2px solid black;    
+}
+
+@media (max-width:683px) or (max-width:540px){
+    img{
+        width: 150px;
+    }
+}

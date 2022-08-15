@@ -290,7 +290,7 @@ Cpu_choices={0:"Rock",1:"Paper",2:"Scissors"}
         playScissors() 
     })
     function playRock(){
-        player_choice="Rock"
+        p_choice="Rock"
         value=Cpu_choices[Math.floor(Math.random()+0.5+Math.random())]
         $('#img1').attr('src','./images/rock.png')
 
@@ -310,7 +310,7 @@ Cpu_choices={0:"Rock",1:"Paper",2:"Scissors"}
     }
 
     function playPaper(){
-        player_choice="Paper"
+        p_choice="Paper"
         value=Cpu_choices[Math.floor(Math.random()+0.5+Math.random())]
         $('#img1').attr('src','./images/paper.png')
 
@@ -330,7 +330,7 @@ Cpu_choices={0:"Rock",1:"Paper",2:"Scissors"}
     }
 
     function playScissors(){
-        player_choice="Scissors"
+        p_choice="Scissors"
         value=Cpu_choices[Math.floor(Math.random()+0.5+Math.random())]
         $('#img1').attr('src','./images/scissors.png')
 
